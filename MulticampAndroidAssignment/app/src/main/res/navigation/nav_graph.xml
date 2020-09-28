@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/communityFragment">
+
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="com.aykutpullu.multicampandroidassignment.view.CommunityFragment"
+        android:label="CommunityFragment" >
+        <action
+            android:id="@+id/action_communityFragment_to_detailCommunityFragment"
+            app:destination="@id/detailCommunityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCommunityFragment"
+        android:name="com.aykutpullu.multicampandroidassignment.view.DetailCommunityFragment"
+        android:label="DetailCommunityFragment">
+        <action
+            android:id="@+id/action_detailCommunityFragment_to_communityFragment"
+            app:destination="@id/communityFragment" />
+        <argument
+            android:name="leaderName"
+            android:defaultValue="Leader Name"
+            app:argType="string" />
+        <argument
+            android:name="leaderPhoto"
+            app:argType="string" />
+        <argument
+            android:name="instaLink"
+            app:argType="string" />
+        <argument
+            android:name="twitterLink"
+            app:argType="string" />
+        <argument
+            android:name="youtubeLink"
+            app:argType="string" />
+        <argument
+            android:name="meetupLink"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="banner"
+            app:argType="string" />
+    </fragment>
+</navigation>
